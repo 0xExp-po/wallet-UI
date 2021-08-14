@@ -1,7 +1,7 @@
 const WalletDetails = (props) => {
   const { balance, name } = props;
   return (
-    <div className="card" style={{ width: "18rem" }}>
+    <div className="card" style={{ marginBottom: '2rem' }}>
       <div className="card-header">
         Wallet Details
       </div>

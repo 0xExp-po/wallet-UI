@@ -37,14 +37,20 @@ const Wallet = () => {
 
   const { name, balance } = walletDetails;
 
-  const walletInfo = (<div className="row align-items-center" style={{ margin: '10rem 5rem 0 5rem' }}>
-    <div className="col">
-      <WalletDetails name={name} balance={balance} />
+  const walletInfo = (
+    <div className="container">
+      <div className="row justify-content-md-center align-items-center" style={{ height: '100vh' }}>
+        <div className="col-md">
+          <div className="col">
+            <WalletDetails name={name} balance={balance} />
+          </div>
+          <div className="col">
+            <WalletTransactionForm fetchWalletDetails={fetchWalletDetails} />
+          </div>
+        </div>
+      </div>
     </div>
-    <div className="col">
-      <WalletTransactionForm fetchWalletDetails={fetchWalletDetails} />
-    </div>
-  </div>)
+  )
   
   return walletId
     ? walletInfo

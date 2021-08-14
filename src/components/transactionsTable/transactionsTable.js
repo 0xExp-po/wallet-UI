@@ -8,7 +8,7 @@ const TransactionsTable = ({ transactions, page, setPage, sortData }) => {
   );
 
   return (
-    <div style={{ margin: '5rem' }}>
+    <div className="container max-content-width" style={{ marginTop: '5rem' }}>
       <table className="table table-striped table-bordered caption-top">
         <caption>Wallet Transactions</caption>
         <thead>
