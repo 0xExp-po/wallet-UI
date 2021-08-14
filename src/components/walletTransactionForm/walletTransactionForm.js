@@ -13,7 +13,6 @@ const WalletTransactionForm = ({ fetchWalletDetails }) => {
   const onSubmit = () => {
     const walletId = localStorage.getItem('walletId');
     const val = type === 'CREDIT' ? amount : -amount;
-    console.log(Number(val));
     startTransactions(walletId, { amount: Number(val), description: type })
       .then((res) => {
         console.log(res);

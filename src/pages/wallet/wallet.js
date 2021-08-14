@@ -13,7 +13,6 @@ const Wallet = () => {
     setupWallet({ name, balance })
       .then((res) => {
         const { id } = res;
-        console.log('id : ', id);
         localStorage.setItem('walletId', id);
         setWalletId(id);
       })
